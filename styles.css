@@ -1,0 +1,92 @@
+:root {
+    --bg: #007e1b;
+    --bcolor: #00ad26;
+    --col1: black;
+    --titlefont: 'Titan One';
+}
+body {
+    background-color: var(--bg);
+}
+.title {
+    text-align: center;
+    color: var(--col1);
+    font-family: var(--titlefont);
+    font-size: 60px;
+    font-weight: 200;
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+    animation-name: "titleanim";
+    animation-duration: 2s;
+    left: 50%; top: 0%;
+}
+.subtitle {
+    text-align: center;
+    color: var(--col1);
+    font-family: var(--titlefont);
+    font-size: 45px;
+    font-weight: 200;
+    margin-top: 5px;
+}
+.boxtext {
+    text-align: center;
+    color: var(--col1);
+    font-family: var(--titlefont);
+    font-size: 30px;
+    font-weight: 200;
+    margin-top: -20px;
+}
+/*
+@keyframes titleanim {
+    0% {
+        transform: translate(-50%, 50%) scale(0.5); 
+}
+}
+*/
+.flex {
+    display: flex;
+}
+.side {
+    flex: 2;
+}
+.center {
+    flex: 5;
+}
+.box {
+    border: 10px solid black;
+    border-radius: 30px;
+    height: 200px;
+    margin-right: -70px;
+    margin-bottom: 40px;
+    background-color: var(--bcolor);
+    box-shadow: 30px 30px 0px rgba(0, 0, 0, 0.5);
+    animation-name: "boxanim";
+    animation-duration: 2s;
+    display: flex;
+}
+/*
+@keyframes boxanim {
+ 
+ 0% {
+        transform: translate(50%);
+    }
+}
+    */ 
+#round {
+    border-radius: 10px;
+    margin: 10px;
+}
+#sub {
+    width: 450px;
+    flex-direction: column;
+}
+.sidebar {
+    border: 10px solid black;
+    border-radius: 30px;
+    height: 900px;
+    margin-left: -70px;
+    margin-bottom: 40px;
+    background-color: var(--bcolor);
+    box-shadow: 30px 30px 0px rgba(0, 0, 0, 0.5);
+    animation-name: "boxanim";
+    animation-duration: 2s;
+    display: flex;
+}
