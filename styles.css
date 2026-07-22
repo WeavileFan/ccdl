@@ -1,15 +1,25 @@
 :root {
     --bg: #007e1b;
+    --title: black;
     --bcolor: #00ad26;
     --col1: black;
+    --col2: white;
     --titlefont: 'Titan One';
+}
+[data-theme="bloodbath"] {
+    --bg: #202020;
+    --title: var(--col2);
+    --bcolor: #ff0000;
+    --col1: #000000;
+    --col2: white;
 }
 body {
     background-color: var(--bg);
+    overflow-x: hidden;
 }
 .title {
     text-align: center;
-    color: var(--col1);
+    color: var(--title);
     font-family: var(--titlefont);
     font-size: 60px;
     font-weight: 200;
@@ -54,7 +64,8 @@ body {
     border: 10px solid black;
     border-radius: 30px;
     height: 200px;
-    margin-right: -70px;
+    position: relative;
+    right: -50px;
     margin-bottom: 40px;
     background-color: var(--bcolor);
     box-shadow: 30px 30px 0px rgba(0, 0, 0, 0.5);
@@ -81,12 +92,52 @@ body {
 .sidebar {
     border: 10px solid black;
     border-radius: 30px;
-    height: 900px;
-    margin-left: -70px;
-    margin-bottom: 40px;
+    height: 1000px;
+    min-width: 300px;
+    width: 600px;
+    margin-left: -100px;
+    margin-right:100px;
     background-color: var(--bcolor);
-    box-shadow: 30px 30px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: -30px 30px 0px rgba(0, 0, 0, 0.5);
     animation-name: "boxanim";
     animation-duration: 2s;
-    display: flex;
+    text-align: center;
+    position: fixed;
+}
+.scroll {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--col2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+a {
+    color: var(--col2);
+}
+legend {
+    text-align: center;
+    color: var(--col1);
+    font-family: var(--titlefont);
+    font-size: 45px;
+    font-weight: 200;
+    margin-top: 5px;
+}
+select {
+    text-align: center;
+    color: var(--col1);
+    font-family: var(--titlefont);
+    font-size: 30px;
+    font-weight: 200;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 5px solid var(--col1);
 }
